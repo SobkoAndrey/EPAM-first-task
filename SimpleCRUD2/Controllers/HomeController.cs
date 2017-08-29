@@ -11,6 +11,7 @@ namespace SimpleCRUD2.Controllers
     public class HomeController : Controller
     {
         private IUserRepository repository;
+        const int DefaultPageSize=5;
 
         public HomeController(IUserRepository repository)
         {
@@ -20,9 +21,9 @@ namespace SimpleCRUD2.Controllers
         [HttpGet]
         public ActionResult Index(int pageNumber = 1)
         {
-            var pageSize = 5;
+            //var pageSize = DefaultPageSize; 
 
-            var users = this.repository.GetUsersListForPage(pageNumber, pageSize);
+            var users = this.repository.GetUsersListForPage(pageNumber, DefaultPageSize);
 
             var pageInfo = new PageInfo
             {
