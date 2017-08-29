@@ -13,6 +13,7 @@ namespace SimpleCRUD2.Providers
         {
             get
             {
+                //лучше уж захардкодить в таких случаях что нибудь
                 throw new NotImplementedException();
             }
 
