@@ -29,6 +29,7 @@ namespace SimpleCRUD2.Repositories
 
         public IEnumerable<UserModel> GetUsersList()
         {
+            //сам знаешь что тут не так :)
             var users = this.context.Users.Select(_ => new UserModel()
             {
                 UserId = _.UserId,
